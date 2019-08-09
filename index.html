@@ -1,1 +1,190 @@
-123
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>burtsbee_sub</title>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" >
+</script>
+<script src="js/jquery.nicescroll.min.js">
+</script>
+
+<style>
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body{line-height: 1; height:100%;}
+html{height:100%;}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link, a:visited {
+    text-decoration:none; color:#fff;
+}
+a:active, a:hover {
+    text-decoration:none; color:#fff;
+}
+
+.clear{
+    clear: both;
+}
+/*  리셋 끝 */
+
+
+
+
+
+#page ul li{ width:100%; }
+	#page { width:100%; height:100%; overflow:hidden; position:absolute;}
+
+	#page .slide .one { width:100%; height:100%; position:absolute; background-image:url(images/robh-ruppel-c-a-s-t-l-e.jpg);}
+	#page .slide .two { width:100%; height:100%; position:absolute; background-image:url(images/burtsbee_background_2.jpg); left:100%;}
+	/* top:100% 하면 밑으로 left:100% 이동하라 */
+	#page .slide .three { width:100%; height:100%; position:absolute; background-image:url(images/burtsbee_background_3.jpg); left:200%;}
+	#page .slide .four { width:100%; height:100%; position:absolute; background-image:url(images/burtsbee_background_4.jpg); left:300%;}
+	#page .slide .five { width:100%; height:100%; position:absolute; background-image:url(images/burtsbee_background_5.jpg); left:400%;}
+
+#nav { position:fixed; top: 53px; left:70px; z-index:9;  width:285px; height:1080px;}
+
+#nav div.logo{width:266px; height:228px; top: 70px; left: 92px;}
+
+#nav ul li {cursor:pointer; width:266px; }
+
+/*.backbox {width:196px; height:1080px; background-color:#FFF; position:fixed; left:0;}*/
+.logo{width:111px; height:71px; position:fixed;top:0px;}
+.navi_01{width:285px; height:60px; position:fixed; top:195px; left: 75px;}
+.navi_02{width:285px; height:59px; position:fixed;top:244px; left: 75px;}
+.navi_03{width:285px; height:59px; position:fixed;top:293px; left: 75px;}
+.navi_04{width:285px; height:59px; position:fixed;top:345px; left: 75px;}
+.navi_05{width:285px; height:59px; position:fixed;top:395px; left: 75px;}
+
+
+.footer{width:285px; height:107px; position:fixed;top:787px;}
+</style>
+
+
+</head>
+
+<body>
+
+
+	<div id="wrap">
+    	<div id="page">
+			<div class="slide">
+            	<span class="one"></span></div><!-- page01 end-->
+			<div class="slide"><span class="two"></span></div>
+			<div class="slide"><span class="three"></span></div>
+      		<div class="slide"><span class="four"></span></div>
+            <div class="slide"><span class="five"></span></div>
+
+
+            <div id="nav"><img src="images/burtsbee_nav_body.png"> <!-- nav back -->
+<div class="logo"><a href="index.html"><img src="images/burtsbee_nav_logo_03.png"></a></div>
+ <ul>
+   <!--<img src="images/burtsbee_nav1_home.png"> -->
+<li class="navi_01"><a href="https://www.behance.net/dusal4742614">브랜드 이야기</a></li>
+<!--<li class="navi_02"><img src="images/burtsbee_nav2_brandstory.png"></li>
+<li class="navi_03"><img src="images/burtsbee_nav3_ingredient.png" ></li>
+<li class="navi_04"><img src="images/burtsbee_nav4_babybee.png"></li>
+<li class="navi_05"><img src="images/burtsbee_nav5_event.png" ></li>-->
+ </ul>
+
+
+
+           </div> <!--nav end-->
+         <!-- <div class="backbox"></div> -->
+     	</div>
+
+    </div>
+
+</body>
+
+<script>
+
+$("#page").niceScroll({cursoropacitymax:0, horizrailenabled:true});
+
+//cursoropacitymax 스크롤이 보이게 안보이게 = 0 보이게는 1
+//horizrailenabled true 페이지 스크롤이 되게 , flase 스크롤 안되게
+// 나이스 스크롤은 이게 끝 밑 부터 메뉴 클릭하면 페이지 넘어가는 것
+
+
+$("#nav ul li").click(function(e) {
+
+	var screenWidth	=	$(window).width() ; //변수이름 screenWidth = 스크린의 가로길이 (마음대로 지정할 수 있다)
+	// window (브라우저 창이 켜졌을 때) 에 있는 width(가로의 길이)의 값을 읽어와라.
+	// 세로로 한다면 height
+
+	var slideIndex	= 	$(this).index() ;
+	// slideIndex 슬라이드 인덱스 , 클릭하면 페이지가 나오도록
+
+
+
+	$('#page').animate({'scrollLeft':screenWidth*slideIndex}, 500);
+});
+//네비가 주는 스크롤 네비 애니메이트 함수 , 대괄호 속성명 : 움직일 변수 이름
+
+</script>
+<script>//hoverimg 이 롤오버 하는 스크립트
+$(document).ready(function(){
+    $(".hoverimg").mouseover(function (){
+        var file = $(this).attr('src').split('/');
+        var filename = file[file.length-1];
+        var path = '';
+
+        for(i=0 ; i < file.length-1 ; i++) {
+            path = ( i == 0 )?path + file[i]:path + '/' + file[i];
+        }
+        $(this).attr('src',path+'/'+filename.replace(/.([a-zA-Z]{3,3})$/, "_on.$1"));
+        //$(this).attr('src',path+'/'+filename.replace('.','_on.'));
+
+    }).mouseout(function(){
+        var file = $(this).attr('src').split('/');
+        var filename = file[file.length-1];
+        var path = '';
+        for(i=0 ; i < file.length-1 ; i++){
+            path = ( i == 0 )?path + file[i]:path + '/' + file[i];
+        }
+        $(this).attr('src',path+'/'+filename.replace(/_on.([a-zA-Z]{3,3})$/, ".$1"));
+        //$(this).attr('src',path+'/'+filename.replace('_on.','.'));
+    });
+});
+</script>
+</html>
