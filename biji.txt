@@ -1,0 +1,42 @@
+Fold
+:help foldmethod  //help
+
+Fold by default
+zo zO   //opens a fold at the cursor or opens all.
+zm zM   //increase foldlevel by one or close all.
+zc	//closes a fold at the cursor.
+zr zR   //reduce the foldlevel by one, or to zero.
+zf{motion}     //ex: zfj == fold on line
+zv	//view cursor line A.K.A. "open just enough folds to make cursor line visible"
+zi	//toggle value of 'foldenable'(mnemonic:invert)
+
+Fold by indent
+	folding are defined by the level of indentations.
+
+Fold by syntax
+eg.you have installed a Vim plugin in which he folding informatin of L is defined,such as c.vim for c/c++, or python-mode for python
+set foldmethod=syntax
+
+set foldlevel={number}
+set foldlevelstart=1
+-------------------------------------------------------------
+mute bash and vim beep sound
+1)turn off bell for bash
+vim ~/.inputrc
+set bell-style none
+2)turn off beel for vi
+vim ~/.vimrc	//{home}/.vimrc  should create one
+set visualbell
+set t_vb=
+-------------------------------------------------------------------
+echo "set -g mouse on" >> ~/tmux.conf //-g copy default conf and add something, enable use mose to scroll.
+
+-----------------------------------------------------------------------
+set number	//show vim number
+set nonumber	//hide vim number
+============================================================================
+$toggle fold at curren position.
+#(using s-tab to avoid collision between <tab> and <c-i>
+nnoremap <s-tab> za
+
+
