@@ -35,5 +35,11 @@ brew install --cask vlc
 '
 :'
  #install on web
- tiles
+ #OS: Mac OS
+ tiles    # tile windows
+ 
+ #OS: pop_os
+ gnome-tweaks    #maximize minimize button
+ stacer   #system monitor and others
+ Dash to Dock 
 '
