@@ -21,7 +21,6 @@ brew install pstree
 
 
 brew install --cask spotify
-brew install --cask chromium
 brew install --cask vlc
 
 : '
