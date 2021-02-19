@@ -12,7 +12,8 @@ brew install htop
 #plugin: ctrlpvim.github.io/ctrlp.vim
 brew install vim
 brew install tmux
-echo "set -g mouse on" >> ~/tmux.conf //-g copy default conf and add something, enable use mose to scroll.
+#-g copy default conf and add something, enable use mose to scroll.
+echo "set -g mouse on" >> ~/tmux.conf 
 
 #install app 
 brew install youtube-dl
