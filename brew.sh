@@ -23,6 +23,7 @@ brew install pstree
 
 brew install --cask spotify
 brew install --cask vlc
+brew install --cask anki
 
 : '
  #install on appStore:  
